@@ -103,9 +103,9 @@ dcmtk cecho cfind cmove cstore
 
 [3. DICOM图像层级分类-DCMTK-数据字典避坑](https://blog.csdn.net/tianma2012/article/details/121449855)
 
-[4. DICOM图像层级分类-DCMTK-元素读取](https://blog.csdn.net/tianma2012/article/details/121456467)
+[4. DICOM图像层级分类-DCMTK-元素读取](https://blog.csdn.net/tianma2012/article/details/121451639)
 
-[5. DICOM图像层级分类-DCMTK-压缩图像PixelData读取](https://blog.csdn.net/tianma2012/article/details/121187922)
+[5. DICOM图像层级分类-DCMTK-压缩图像PixelData读取](https://blog.csdn.net/tianma2012/article/details/121456467)
 
 [6. DICOM图像显示-DCMTK-像素数据获取的三种方式和源码分析](https://blog.csdn.net/tianma2012/article/details/121529245)
 
