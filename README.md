@@ -1,5 +1,14 @@
 # dicom
 dcmtk cecho cfind cmove cstore
+
+三个专栏
+
+[从零编程实现DICOM协议-代码实现](https://blog.csdn.net/tianma2012/category_11479149.html)讲解DICOM成像协议原理。
+
+[从零讲解DICOM协议-成像协议](https://blog.csdn.net/tianma2012/category_11461074.html)讲解DICOM成像协议的代码实现。
+
+[DICOM图像高级应用](https://blog.csdn.net/tianma2012/category_11488693.html)讲解DICOM图像的高级应用和代码实现
+
 # 一. 从零编程实现DICOM协议-代码实现
 
 本专栏为DICOM协议-成像协议相关的代码实现，主要以本人自己写的DICOM解析引擎来讲解，后续也会加入一些开源框架的源码分析。
@@ -37,6 +46,15 @@ dcmtk cecho cfind cmove cstore
 [8 DICOM成像协议编码实现-保存BMP图像](https://blog.csdn.net/tianma2012/article/details/121414417)
 
 # 2. 从零讲解DICOM协议-成像协议
+
+  在刚开始接触DICOM图像时，由于历史原因使用了一个远古的框架，这个框架早就停止更新了，因此底层存在不少bug，对部分DICOM图像兼容性不好。当时公司内没有了解DICOM协议的，只能自己硬着头皮一边查资料看DICOM英文协议，一边看框架源码，对照协议修改框架源码。
+
+  远古框架只有32位版本，没有64位版本，三维重建操作容易内存不足。随着对DICOM协议越来越熟悉，便想手动编码实现DICOM协议。DICOM协议分为成像和传输两部分，成像协议是传输协议的基础，因此先用C++语言把DICOM协议中的对象和面向对象编程方式结合，封装DICOM协议中的group，element，vr，length，value等对象，实现了DICOM成像协议部分。后来用C++语言实现了DICOM协议中的传输部分，实现了CEcho，CFind，Cmove，CStore等功能。
+
+  后来做过基于Windows系统的桌面系统和基于Linux系统的后端服务，接触了多个DICOM框架，包括C++语言的DCMTK，C#语言的DicomObject，Python语言的pydicom，java语言的Dcm4Chee，javascript语言的Cornerstone.js。
+
+  基于DICOM引擎实现部分上层应用，包括简单的测量、窗宽窗位调整等，也包括手撸代码实现MPR功能，基于VTK实现了部分三维重建功能。
+
 [从零讲解DICOM协议-成像协议](https://blog.csdn.net/tianma2012/category_11461074.html)
 
 [1 我的DICOM学习之路](https://blog.csdn.net/tianma2012/article/details/121182403)
@@ -65,6 +83,17 @@ dcmtk cecho cfind cmove cstore
 
 [13 DICOM彩色图像](https://blog.csdn.net/tianma2012/article/details/121280318)
 # 3. DICOM图像高级应用
+
+  本专栏在上面文章的基础上，讲解DICOM图像的高级应用和代码实现，即实际产品开发过程中的一些要点、问题和解决方法。
+  
+  基于单张DICOM图像从图像解析到图像显示，只是图像应用的基本功能。医生往往需要查看整个检查Study的图像去分析，并且需要对单张DICOM图像进行放大，调窗，测量等操作去更进一步观察图像。
+  
+  一些高级应用中会对序列图像进行一些后处理，比如三维重建，对一个序列的二维图像进行三维重建，方便查看器官间的相对位置。可以进行三维旋转，从不同角度观察，可以对三维图像进行切割等操作，模拟手术，观察切割后的图像中器官和血管的损伤程度，以及来验证即将采用的手术方案是否合理。
+
+  因此DICOM图像的高级应用有很多，有技术深度和难度。本专栏由易到难进行讲解。
+  
+  基于不同的开源框架的优点，会采用不同语言开发的框架进行代码实现，一方面可熟悉开源框架的同时快速实现功能逻辑，一方面便于熟悉不同开发语言的读者进行参考。
+
 
 [DICOM图像高级应用](https://blog.csdn.net/tianma2012/category_11488693.html)
 
